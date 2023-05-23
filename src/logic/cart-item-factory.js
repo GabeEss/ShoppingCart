@@ -1,10 +1,11 @@
 const createShoppingItem = (data) => {
-    const { name, price, type } = data;
+    const { name, price, type, gallery } = data;
 
     return {
       name,
       price,
-      type
+      type,
+      gallery: gallery || []
     };
 }
 

@@ -6,6 +6,7 @@ describe('createShoppingItem', () => {
       name: 'Test Item',
       price: 19.99,
       type: 'Electronics',
+      gallery: []
     };
 
     const shoppingItem = createShoppingItem(data);
