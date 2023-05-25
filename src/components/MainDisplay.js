@@ -2,10 +2,9 @@ import React, {useState} from "react";
 import "../css/MainDisplay.css";
 import Sidebar from "./Sidebar";
 import ProductDisplay from "./ProductDisplay";
-import allProducts from "../data/all-products";
 
 const MainDisplay = () => {
-     const [selectedProductType, setSelectedProduct] = useState(allProducts);
+     const [selectedProductType, setSelectedProduct] = useState();
 
     const handleProductSelection = (type) => {
         setSelectedProduct(type);

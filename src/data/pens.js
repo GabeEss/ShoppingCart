@@ -19,6 +19,7 @@ const pens = {
     price: 1.98,
     type: "pen",
     gallery: bicImages,
+    id: "BIC Cristal Ball Stick Pens, Medium Point (1.0mm), Assorted Colors, 10-Pack",
   }),
 
   moustachePen: createShoppingItem({
@@ -26,6 +27,7 @@ const pens = {
     price: 3.49,
     type: "pen",
     gallery: moustacheImages,
+    id: "Gel Pens, 0.7mm Tip, Black, 12/Box - Moustache",
   }),
 
   mrPen: createShoppingItem({
@@ -33,6 +35,7 @@ const pens = {
     price: 14.81,
     type: "pen",
     gallery: mrPenImages,
+    id: "Mr. Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack of 6",
   }),
 };
 

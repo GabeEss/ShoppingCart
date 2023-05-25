@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Cart from "./Cart";
 import '../css/Header.css';
 
 const Header = ({ onToggleCart }) => {

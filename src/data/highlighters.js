@@ -9,7 +9,8 @@ const highlighterOne = createShoppingItem({
         name: "Sharpie ACCENT Highlighter, 4-Carded, Fluorescent Assorted",
         price: 9.89,
         type: "highlighter",
-        gallery: highlighterImages
+        gallery: highlighterImages,
+        id: "Sharpie ACCENT Highlighter, 4-Carded, Fluorescent Assorted",
 })
 
 export { highlighterOne };

@@ -9,7 +9,8 @@ const notebookOne = createShoppingItem({
         name: "Hilroy Coil 1-subject Wide Ruled Notebook, 200 Pages (100 Sheets)",
         price: 2.96,
         type: "notebook",
-        gallery: notebookImages
+        gallery: notebookImages,
+        id: "Hilroy Coil 1-subject Wide Ruled Notebook, 200 Pages (100 Sheets)",
 })
 
 export { notebookOne };

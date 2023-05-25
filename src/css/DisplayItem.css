@@ -1,3 +1,11 @@
+a{
+    all:unset;
+}
+
+a:visited{
+    all:unset;
+}
+
 img{
     width: 200px;
     height: 200px;
