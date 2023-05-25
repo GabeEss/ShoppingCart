@@ -13,25 +13,27 @@ const bicImages = [bicImageOne, bicImageTwo, bicImageThree];
 const paperImages = [paperImageOne, paperImageTwo, paperImageThree];
 const staedtlerImages = [staedtlerImageOne, staedtlerImageTwo, staedtlerImageThree];
 
-const bicPencil = createShoppingItem({
-    name: "BIC Matic Grip Mechanical Pencils, Black, 0.7mm, 5-pack",
-    price: 3.99,
-    type: "pencil",
-    gallery: bicImages
-})
-
-const paperPencil = createShoppingItem({
-    name: "PAPER MATE EverStrong #2 Pencils, 72-Count, Black",
-    price: 19.99,
-    type: "pencil",
-    gallery: paperImages
-})
-
-const staedtlerPencil = createShoppingItem({
-    name: "Staedtler 13246CB18P11TH The Premium Pencil, Norica, HB2 special lead, 12",
-    price: 9.88,
-    type: "pencil",
-    gallery: staedtlerImages
-})
-
-export { bicPencil, paperPencil, staedtlerPencil };
+const pencils = {
+    bicPencil: createShoppingItem({
+      name: "BIC Matic Grip Mechanical Pencils, Black, 0.7mm, 5-pack",
+      price: 3.99,
+      type: "pencil",
+      gallery: bicImages,
+    }),
+  
+    paperPencil: createShoppingItem({
+      name: "PAPER MATE EverStrong #2 Pencils, 72-Count, Black",
+      price: 19.99,
+      type: "pencil",
+      gallery: paperImages,
+    }),
+  
+    staedtlerPencil: createShoppingItem({
+      name: "Staedtler 13246CB18P11TH The Premium Pencil, Norica, HB2 special lead, 12",
+      price: 9.88,
+      type: "pencil",
+      gallery: staedtlerImages,
+    }),
+  };
+  
+  export default pencils;

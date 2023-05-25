@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/DisplayItem.css';
 
 const DisplayItem = ({product}) => {
-
     const {name, price, gallery} = product;
     return(
         <div className='item'>

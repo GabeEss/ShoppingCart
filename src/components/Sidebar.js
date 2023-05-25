@@ -1,16 +1,15 @@
-import allProducts from "../data/all-products";
 import "../css/Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({onSelectProduct}) => {
     return(
         <div className="sidebar">
-            <button className="sidebar-buttons" id="all-button">All Products</button>
-            <button className="sidebar-buttons">Chairs</button>
-            <button className="sidebar-buttons">Erasers</button>
-            <button className="sidebar-buttons">Highlighters</button>
-            <button className="sidebar-buttons">Notebooks</button>
-            <button className="sidebar-buttons">Pencils</button>
-            <button className="sidebar-buttons">Pens</button>
+            <button onClick={() => onSelectProduct('all')}className="sidebar-buttons" id="all-button">All Products</button>
+            <button onClick={() => onSelectProduct('chairs')} className="sidebar-buttons">Chairs</button>
+            <button onClick={() => onSelectProduct('erasers')}className="sidebar-buttons">Erasers</button>
+            <button onClick={() => onSelectProduct('highlighters')} className="sidebar-buttons">Highlighters</button>
+            <button onClick={() => onSelectProduct('notebooks')} className="sidebar-buttons">Notebooks</button>
+            <button onClick={() => onSelectProduct('pencils')} className="sidebar-buttons">Pencils</button>
+            <button onClick={() => onSelectProduct('pens')} className="sidebar-buttons">Pens</button>
         </div>
     )
 }

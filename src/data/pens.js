@@ -13,25 +13,27 @@ const bicImages = [bicImageOne, bicImageTwo, bicImageThree];
 const moustacheImages = [moustacheImageOne, moustacheImageTwo, moustacheImageThree];
 const mrPenImages = [mrPenImageOne, mrPenImageTwo, mrPenImageThree];
 
-const bicPen = createShoppingItem({
+const pens = {
+  bicPen: createShoppingItem({
     name: "BIC Cristal Ball Stick Pens, Medium Point (1.0mm), Assorted Colors, 10-Pack",
     price: 1.98,
     type: "pen",
-    gallery: bicImages
-})
+    gallery: bicImages,
+  }),
 
-const moustachePen = createShoppingItem({
+  moustachePen: createShoppingItem({
     name: "Gel Pens, 0.7mm Tip, Black, 12/Box - Moustache",
     price: 3.49,
     type: "pen",
-    gallery: moustacheImages
-})
+    gallery: moustacheImages,
+  }),
 
-const mrPen = createShoppingItem({
+  mrPen: createShoppingItem({
     name: "Mr. Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack of 6",
     price: 14.81,
     type: "pen",
-    gallery: mrPenImages
-})
+    gallery: mrPenImages,
+  }),
+};
 
-export { bicPen, moustachePen, mrPen };
+export default pens;

@@ -2,8 +2,11 @@ import { chairOne } from "./chairs";
 import { eraserOne } from "./erasers";
 import { highlighterOne } from "./highlighters";
 import { notebookOne } from "./notebooks";
-import { bicPen, mrPen, moustachePen } from "./pens";
-import { bicPencil, paperPencil, staedtlerPencil } from "./pencils";
+import pens from "./pens";
+import pencils from "./pencils";
+
+const { bicPen, moustachePen, mrPen } = pens;
+const { bicPencil, paperPencil, staedtlerPencil } = pencils;
 
 const allProducts = [
     chairOne,
@@ -11,11 +14,11 @@ const allProducts = [
     highlighterOne,
     notebookOne,
     bicPen,
-    mrPen,
     moustachePen,
+    mrPen,
     bicPencil,
     paperPencil,
-    staedtlerPencil
+    staedtlerPencil,
 ]
 
 export default allProducts;
