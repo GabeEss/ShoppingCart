@@ -1,8 +1,7 @@
 import React from "react";
 import "../css/ShopPage.css";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import ProductDisplay from "../components/ProductDisplay";
+import MainDisplay from "../components/MainDisplay";
 
 const ShopPage = () => {
     return(
@@ -11,8 +10,7 @@ const ShopPage = () => {
                 <Header/>
             </div>
             <div className="products">
-                <Sidebar/>
-                <ProductDisplay/>
+                <MainDisplay/>
             </div>
         </div>
     )

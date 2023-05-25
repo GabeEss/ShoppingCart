@@ -5,7 +5,7 @@ import bicImageThree from '../images/pens/Gallery_3 BIC Cristal Ball Stick Pens,
 import moustacheImageOne from '../images/pens/Gallery_1 Moustache Gel Pens, 0.7mm Tip, Black, 12:box Moustache.jpeg';
 import moustacheImageTwo from '../images/pens/Gallery_2 Gel Pens, 0.7mm Tip, Black, 12:Box - Moustache.jpeg';
 import moustacheImageThree from '../images/pens/Gallery_3 Gel Pens, 0.7mm Tip, Black, 12:Box - Moustache.jpeg';
-import mrPenImageOne from '../images/pensGallery_1 Mr Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack Of 6.jpg';
+import mrPenImageOne from '../images/pens/Gallery_1 Mr Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack Of 6.jpg';
 import mrPenImageTwo from '../images/pens/Gallery_2 Mr. Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack of 6.jpg';
 import mrPenImageThree from '../images/pens/Gallery_3 Mr. Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack of 6.jpg';
 

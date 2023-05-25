@@ -21,7 +21,8 @@ const Header = () => {
     };
 
     return(
-        <div className="header">
+        <div>
+            <div className="header">
             <div className="pages">
                 <a href="/">Home</a>
                 <a href="/Shop">Shop</a>
@@ -41,7 +42,10 @@ const Header = () => {
                 {!isCartOpen && <button onClick={handleCartOpen}>Cart</button>}
             </div>
             {isCartOpen && <Cart />}
+            </div>
+            <div className="header-spacer"></div>
         </div>
+        
     )
 }
 

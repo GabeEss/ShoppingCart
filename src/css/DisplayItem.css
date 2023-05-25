@@ -1,0 +1,27 @@
+img{
+    width: 200px;
+    height: 200px;
+}
+  
+  .item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .item .name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .item .price {
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .item:hover .name {
+    color: #656464;
+  }
+  
+  .item:hover .price {
+    color: #656464;
+  }
