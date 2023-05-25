@@ -61,20 +61,21 @@
     background-color: #656464;
   }
   
-  .cart {
+ .cart-button {
     margin-right: 20px;
-  }
+ }
 
-  .cart button {
+ .cart-button button {
     padding: 5px 10px;
     font-size: 14px;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
+    z-index: 102;
   }
   
-  .cart button:hover {
+  .cart-button button:hover {
     background-color: #656464;
   }
   

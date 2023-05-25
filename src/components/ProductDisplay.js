@@ -32,7 +32,7 @@ const ProductDisplay = ({selectedProduct}) => {
             setProducts([]);
             setMultiples([]);
             let index = 0;
-            // Needed to destructure pencils as an object without naming each object that it destructures.
+            // Get pencils as an array and then use forEach loop on it.
             Object.values(pencils).forEach(element => {
                 index += 1;
                 editDisplayMultiple(element, index)
@@ -63,7 +63,6 @@ const ProductDisplay = ({selectedProduct}) => {
       const editDisplayMultiple = (product, index) => {
         const mappedProduct = <DisplayItem key={index} product={product} />;
 
-        // Hold multiple containers within setMultiples.
         setMultiples((prevMultiples) => [...prevMultiples, mappedProduct]);
       };
 

@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import Cart from "./Cart";
 import '../css/Header.css';
 
-const Header = () => {
-    const [isCartOpen, setCartOpen] = useState(false);
+const Header = ({ onToggleCart }) => {
     const [searchTerm, setSearchTerm] = useState("");
-
-    const handleCartOpen = () => {
-        setCartOpen(true);
-    };
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -38,10 +33,9 @@ const Header = () => {
                         <button type="submit">Search</button>
                     </form>
             </div>
-            <div className="cart">
-                {!isCartOpen && <button onClick={handleCartOpen}>Cart</button>}
-            </div>
-            {isCartOpen && <Cart />}
+                <div className="cart-button">
+                    <button onClick={onToggleCart}>Open Cart</button>
+                </div>
             </div>
             <div className="header-spacer"></div>
         </div>
