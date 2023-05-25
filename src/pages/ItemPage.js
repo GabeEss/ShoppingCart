@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Header from "../components/Header";
 import Cart from "../components/Cart";
+import { ProductContext } from "../components/ProductContext";
 
 const ItemPage = () => {
+    const { product } = useContext(ProductContext);
     const [isCartExpanded, setIsCartExpanded] = useState(false);
 
     const handleToggleCart = () => {
@@ -17,7 +19,13 @@ const ItemPage = () => {
             ) : (
                 <Cart onCloseCart={handleToggleCart} />
             )}
-            <h1>Item</h1>
+            {product && (
+                <div>
+                <h2>{product.name}</h2>
+                <p>{product.price}</p>
+                <img alt="" src={product.gallery[0]} />
+                </div>
+            )}
         </div>   
     )
 }
