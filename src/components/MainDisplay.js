@@ -13,7 +13,6 @@ const MainDisplay = () => {
         setSelectedProduct(type);
   };
 
-
     return(
         <div className="main-display">
             <Sidebar onSelectProduct={handleProductSelection} />
