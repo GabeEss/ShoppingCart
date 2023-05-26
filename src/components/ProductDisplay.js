@@ -13,6 +13,7 @@ const ProductDisplay = ({selectedProduct}) => {
     const [products, setProducts] = useState([]);
     const [multiples, setMultiples] = useState([]);
 
+
     // Display all products on-load
     useEffect(() => {
         editDisplayAll(allProducts);
@@ -62,15 +63,15 @@ const ProductDisplay = ({selectedProduct}) => {
 
       const editDisplayMultiple = (product, index) => {
         const mappedProduct = <DisplayItem key={index} product={product} />;
-
         setMultiples((prevMultiples) => [...prevMultiples, mappedProduct]);
       };
 
     const editDisplayOneItem = (product) => {
         setMultiples([]);
-        const mappedProduct = <DisplayItem product={product}/>
+        const mappedProduct = <DisplayItem product={product} />
         setProducts(mappedProduct);
     }
+
 
     return(
         <div className="product-display">

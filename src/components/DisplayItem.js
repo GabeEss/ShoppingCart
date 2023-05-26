@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { ProductContext } from './ProductContext';
 import '../css/DisplayItem.css';
@@ -11,6 +11,7 @@ const DisplayItem = ({product}) => {
     const handleClick = () => {
         setProductInfo(product);
     };
+
 
     return(
         <div className='item'>

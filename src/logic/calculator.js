@@ -10,7 +10,7 @@ function calculateCost(shoppingCart) {
         }
     });
 
-    return total;
+    return total.toFixed(2);
 }
 
 export default calculateCost;
