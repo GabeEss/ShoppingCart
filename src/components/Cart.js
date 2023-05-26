@@ -9,10 +9,10 @@ const Cart = ({onCloseCart, className}) => {
     const {cart, setCartInfo} = useContext(CartContext);
 
 
-    // useEffect(() => {
-    //     const total = calculateCost(cart);
-    //     setSubtotal(total);
-    // }, [cart])
+    useEffect(() => {
+        const total = calculateCost(cart);
+        setSubtotal(total);
+    }, [cart])
 
     const handleCheckout = () => {
         // Clear the cart by setting an empty cart

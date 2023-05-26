@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import '../css/CartItem.css';
 import { CartContext } from './CartContext';
 import createShoppingCart from '../logic/cart-factory';
 import createShoppingItem from '../logic/cart-item-factory';
@@ -63,9 +64,9 @@ const CartItem = ({item}) => {
         <div className='cart-item'>
             <div className='name-quantity'>
                 <h3 className='name'>{name}</h3>
-                <div>{quantity}</div>
+                <div>Quantity: {quantity}</div>
             </div>
-            <div className='price'>{price}</div>
+            <div className='price'>Price: ${price}</div>
             <div className='quantity-panel'>
                 <button id='increment' onClick={handleAddToCart}>+</button>
                 <button id='decrement' onClick={handleSubtract}>-</button>

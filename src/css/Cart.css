@@ -58,8 +58,8 @@
     background-color: #555;
   }
   
-  .cart .items .cart-item {
-    /* Styles for cart items */
+  .cart-item {
+    gap: 5px;
   }
   
   .cart .subtotal {

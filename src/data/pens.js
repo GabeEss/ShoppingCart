@@ -23,12 +23,13 @@ const pens = {
     quantity: 0,
   }),
 
+  // Notice the id is different than the name. Can't have / in the url.
   moustachePen: createShoppingItem({
     name: "Gel Pens, 0.7mm Tip, Black, 12/Box - Moustache",
     price: 3.49,
     type: "pen",
     gallery: moustacheImages,
-    id: "Gel Pens, 0.7mm Tip, Black, 12/Box - Moustache",
+    id: "Gel Pens, 0.7mm Tip, Black, 12 Box - Moustache",
     quantity: 0,
   }),
 
