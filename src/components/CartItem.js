@@ -8,21 +8,54 @@ const CartItem = ({item}) => {
     const {cart, setCartInfo} = useContext(CartContext);    
 
     const handleAddToCart = () => {
-        let newCart = createShoppingCart();
-        let newItem = createShoppingItem({
-            name: item.name,
-            price: item.price,
-            type: item.type,
-            gallery: item.gallery,
-            id: item.id,
-            quantity: 1,
-          });
-        newCart.addItem(newItem);
-        setCartInfo(newCart);
-      };
-    
+        const updatedCart = createShoppingCart();
+      
+        cart.items.forEach((cartItem) => {
+          // Find the item to add by matching the ID
+          if (cartItem.id === item.id) {
+              const addedItem = createShoppingItem({
+                name: cartItem.name,
+                price: cartItem.price,
+                type: cartItem.type,
+                gallery: cartItem.gallery,
+                id: cartItem.id,
+                quantity: cartItem.quantity + 1,
+              });
+              updatedCart.addItem(addedItem);
+          } else {
+            // Add the other items as they are
+            updatedCart.addItem(cartItem);
+          }
+        });
+        setCartInfo(updatedCart);
+    }
       const handleSubtract = () => {
-        
+        const updatedCart = createShoppingCart();
+      
+        cart.items.forEach((cartItem) => {
+          // Find the item to subtract by matching the ID
+          if (cartItem.id === item.id) {
+            // If the quantity is greater than 1, decrease it by 1
+            if (cartItem.quantity > 1) {
+              const subtractedItem = createShoppingItem({
+                name: cartItem.name,
+                price: cartItem.price,
+                type: cartItem.type,
+                gallery: cartItem.gallery,
+                id: cartItem.id,
+                quantity: cartItem.quantity - 1,
+              });
+              updatedCart.addItem(subtractedItem);
+            }
+            // If the quantity is 1, skip adding the item to remove it
+          } else {
+            // Add the other items as they are
+            updatedCart.addItem(cartItem);
+          }
+        });
+      
+        // Update the cart with the modified item quantities
+        setCartInfo(updatedCart);
       };
 
     return(
