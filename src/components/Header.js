@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CartContext } from "./CartContext";
 import '../css/Header.css';
 
 const Header = ({ onToggleCart }) => {
     const [searchTerm, setSearchTerm] = useState("");
+    const {cart} = useContext(CartContext);
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -33,12 +35,16 @@ const Header = ({ onToggleCart }) => {
                     </form>
             </div>
                 <div className="cart-button">
-                    <button onClick={onToggleCart}>Open Cart</button>
+                    <button onClick={onToggleCart}>Cart</button>
+                    {cart.items.length > 0 && (
+                        <div id="cart-length">
+                            {cart.items.length > 99 ? "99+" : cart.items.length}
+                        </div>
+                        )}
                 </div>
             </div>
             <div className="header-spacer"></div>
         </div>
-        
     )
 }
 
