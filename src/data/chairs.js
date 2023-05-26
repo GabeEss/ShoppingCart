@@ -11,6 +11,7 @@ const chairOne = createShoppingItem({
         type: "chair",
         gallery: chairImages,
         id: "Mimoglad Office Chair",
+        quantity: 0,
 })
 
 export { chairOne };

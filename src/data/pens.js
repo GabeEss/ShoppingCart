@@ -20,6 +20,7 @@ const pens = {
     type: "pen",
     gallery: bicImages,
     id: "BIC Cristal Ball Stick Pens, Medium Point (1.0mm), Assorted Colors, 10-Pack",
+    quantity: 0,
   }),
 
   moustachePen: createShoppingItem({
@@ -28,6 +29,7 @@ const pens = {
     type: "pen",
     gallery: moustacheImages,
     id: "Gel Pens, 0.7mm Tip, Black, 12/Box - Moustache",
+    quantity: 0,
   }),
 
   mrPen: createShoppingItem({
@@ -36,6 +38,7 @@ const pens = {
     type: "pen",
     gallery: mrPenImages,
     id: "Mr. Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack of 6",
+    quantity: 0,
   }),
 };
 

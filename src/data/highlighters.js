@@ -11,6 +11,7 @@ const highlighterOne = createShoppingItem({
         type: "highlighter",
         gallery: highlighterImages,
         id: "Sharpie ACCENT Highlighter, 4-Carded, Fluorescent Assorted",
+        quantity: 0,
 })
 
 export { highlighterOne };

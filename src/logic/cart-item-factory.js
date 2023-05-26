@@ -1,5 +1,5 @@
 const createShoppingItem = (data) => {
-    const { name, price, type, gallery, id } = data;
+    const { name, price, type, gallery, id, quantity } = data;
 
     return {
       name,
@@ -7,6 +7,7 @@ const createShoppingItem = (data) => {
       type,
       gallery: gallery || [],
       id,
+      quantity,
     };
 }
 

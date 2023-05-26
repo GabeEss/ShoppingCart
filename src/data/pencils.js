@@ -20,6 +20,7 @@ const pencils = {
       type: "pencil",
       gallery: bicImages,
       id: "BIC Matic Grip Mechanical Pencils, Black, 0.7mm, 5-pack",
+      quantity: 0,
     }),
   
     paperPencil: createShoppingItem({
@@ -28,6 +29,7 @@ const pencils = {
       type: "pencil",
       gallery: paperImages,
       id: "PAPER MATE EverStrong #2 Pencils, 72-Count, Black",
+      quantity: 0,
     }),
   
     staedtlerPencil: createShoppingItem({
@@ -36,6 +38,7 @@ const pencils = {
       type: "pencil",
       gallery: staedtlerImages,
       id: "Staedtler 13246CB18P11TH The Premium Pencil, Norica, HB2 special lead, 12",
+      quantity: 0,
     }),
   };
   

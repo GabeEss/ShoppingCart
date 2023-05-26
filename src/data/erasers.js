@@ -11,6 +11,7 @@ const eraserOne = createShoppingItem({
         type: "eraser",
         gallery: eraserImages,
         id: "Pentel Hi-Polymer Large Eraser 2-Pack, White",
+        quantity: 0,
 })
 
 export { eraserOne };
