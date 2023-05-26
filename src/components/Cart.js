@@ -1,4 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import calculateCost from '../logic/calculator';
 import "../css/Cart.css";
 import CartItem from './CartItem';
@@ -17,7 +18,11 @@ const Cart = ({onCloseCart, className}) => {
     const handleCheckout = () => {
         // Clear the cart by setting an empty cart
         setCartInfo('reset');
+        onCloseCart();
       };
+
+    const browseString = "Browse";
+    const checkoutString = "Checkout";
 
     return(
         <div className={`cart ${className}`}>
@@ -31,7 +36,9 @@ const Cart = ({onCloseCart, className}) => {
             ))}
             </div>
             <div>Subtotal: {subtotal}</div>
-            <div onClick={handleCheckout} id="checkout">Checkout</div>
+            <Link to={`/Shop`} onClick={handleCheckout} id="checkout">
+                {subtotal === 0 ? browseString : checkoutString}
+            </Link>
         </div>
     )
 }
