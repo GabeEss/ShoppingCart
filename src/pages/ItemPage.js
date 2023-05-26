@@ -8,7 +8,7 @@ import createShoppingItem from "../logic/cart-item-factory";
 
 const ItemPage = () => {
     const { product } = useContext(ProductContext);
-    const { setCartInfo } = useContext(CartContext);
+    const { cart, setCartInfo } = useContext(CartContext);
     const [isCartExpanded, setIsCartExpanded] = useState(false);
 
     const handleToggleCart = () => {
@@ -19,7 +19,6 @@ const ItemPage = () => {
         if (product.quantity === 0) {
             product.quantity = 1;
         }
-        let newCart = createShoppingCart();
         let newItem = createShoppingItem({
             name: product.name,
             price: product.price,
@@ -28,8 +27,32 @@ const ItemPage = () => {
             id: product.id,
             quantity: product.quantity,
           });
-        newCart.addItem(newItem);
-        setCartInfo(newCart);
+        let itemAdded = false; // Flag to track whether the item has been added to the cart
+        const updatedCart = createShoppingCart();
+          
+        cart.items.forEach((cartItem) => {
+            // Find the item to add by matching the ID
+            if (cartItem.id === newItem.id) {
+                const addedItem = createShoppingItem({
+                name: cartItem.name,
+                price: cartItem.price,
+                type: cartItem.type,
+                gallery: cartItem.gallery,
+                id: cartItem.id,
+                quantity: cartItem.quantity + 1,
+                });
+                updatedCart.addItem(addedItem);
+                itemAdded = true;
+            } else {
+                // Add the other items as they are to the new cart.
+                updatedCart.addItem(cartItem);
+            }
+        });
+        if (!itemAdded) {
+            // If the item hasn't been added, add it to the cart
+            updatedCart.addItem(newItem);
+        }
+        setCartInfo(updatedCart);   
     }
 
     return(

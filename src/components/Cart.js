@@ -1,4 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react';
+import calculateCost from '../logic/calculator';
 import "../css/Cart.css";
 import CartItem from './CartItem';
 import { CartContext } from './CartContext';
@@ -6,6 +7,12 @@ import { CartContext } from './CartContext';
 const Cart = ({onCloseCart, className}) => {
     const [subtotal, setSubtotal] = useState(0);
     const {cart, setCartInfo} = useContext(CartContext);
+
+
+    // useEffect(() => {
+    //     const total = calculateCost(cart);
+    //     setSubtotal(total);
+    // }, [cart])
 
     const handleCheckout = () => {
         // Clear the cart by setting an empty cart

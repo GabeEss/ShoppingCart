@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import createShoppingCart from '../logic/cart-factory';
 import createShoppingItem from '../logic/cart-item-factory';
@@ -23,7 +23,8 @@ const CartItem = ({item}) => {
               });
               updatedCart.addItem(addedItem);
           } else {
-            // Add the other items as they are
+            // Add the other items as they are to the new cart.
+            console.log(cartItem);
             updatedCart.addItem(cartItem);
           }
         });
@@ -35,7 +36,8 @@ const CartItem = ({item}) => {
         cart.items.forEach((cartItem) => {
           // Find the item to subtract by matching the ID
           if (cartItem.id === item.id) {
-            // If the quantity is greater than 1, decrease it by 1
+            // If the quantity is greater than 1, decrease it by 1.
+            // If the quantity is 1, it won't be added to the new cart, thus it will be removed.
             if (cartItem.quantity > 1) {
               const subtractedItem = createShoppingItem({
                 name: cartItem.name,
@@ -47,7 +49,6 @@ const CartItem = ({item}) => {
               });
               updatedCart.addItem(subtractedItem);
             }
-            // If the quantity is 1, skip adding the item to remove it
           } else {
             // Add the other items as they are
             updatedCart.addItem(cartItem);
