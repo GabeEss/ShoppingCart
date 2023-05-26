@@ -1,0 +1,48 @@
+.image-carousel {
+    padding-top: 100px;
+    max-width: 250px; /* Adjust the value to your desired width */
+    margin: 0 auto; /* Center the carousel horizontally */
+  }
+  
+  .image-carousel .carousel .slider-wrapper {
+    overflow: hidden; /* Prevent the carousel from overflowing its container */
+  }
+  
+  .image-carousel .carousel .slider {
+    display: flex; /* Ensure the slides are displayed in a row */
+  }
+  
+  .image-carousel .carousel .slider .slide {
+    flex: 0 0 auto; /* Allow the slides to maintain their original size */
+  }
+  
+  .image-carousel .carousel .control-arrow {
+    font-size: 24px; /* Increase the font size of the navigation buttons */
+    width: 40px; /* Increase the width of the navigation buttons */
+    height: auto; /* Increase the height of the navigation buttons */
+    background-color: rgba(0, 0, 0, 0.2); /* Change the background color */
+  }
+  
+  .image-carousel .carousel .control-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Change the background color on hover */
+  }
+
+  .item-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-information button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .item-information button:hover {
+    background-color: #656464;
+  }

@@ -1,6 +1,9 @@
 import React, {useState, useContext} from "react";
 import Header from "../components/Header";
+import '../css/ItemPage.css';
 import Cart from "../components/Cart";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { ProductContext } from "../components/ProductContext";
 import { CartContext } from "../components/CartContext";
 import createShoppingCart from "../logic/cart-factory";
@@ -65,12 +68,20 @@ const ItemPage = () => {
             )}
             {product && (
                 <div>
-                <h2>{product.name}</h2>
-                <p>{product.price}</p>
-                <img alt="" src={product.gallery[0]} />
-                <button onClick={handleAddToCart}>Add Item to Cart</button>
+                    <Carousel showThumbs={false} className="image-carousel">
+                    {product.gallery.map((image, index) => (
+                        <div key={index}>
+                        <img src={image} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                    </Carousel>
+                    <div className="item-information">
+                        <h2>{product.name}</h2>
+                        <h3>Price: ${product.price}</h3>
+                        <button onClick={handleAddToCart}>Add Item to Cart</button>
+                        </div>
                 </div>
-            )}
+                )}
         </div>   
     )
 }
