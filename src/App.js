@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProductProvider } from './components/ProductContext';
 import { CartProvider } from "./components/CartContext";
 import { SearchProvider } from "./components/SearchContext";
@@ -10,7 +10,7 @@ import ItemPage from "./pages/ItemPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ProductProvider>
         <SearchProvider>
           <CartProvider>
@@ -22,7 +22,7 @@ const App = () => {
             </CartProvider>
           </SearchProvider>
         </ProductProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
