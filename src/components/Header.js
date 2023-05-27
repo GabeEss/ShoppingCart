@@ -19,12 +19,17 @@ const Header = ({ onToggleCart }) => {
         navigate("/Shop");
       };
 
+    // User go home on click.
+    const handleHome = () => {
+        navigate("/");
+    }
+
     return(
         <div>
             <div className="header">
             <div className="pages">
-                <a href="/">Home</a>
-                <a href="/Shop">Shop</a>
+                <button onClick={handleHome}>Home</button>
+                <button onClick={handleFormSubmit}>Shop</button>
             </div>
             <div className="search">
                 <form onSubmit={handleFormSubmit}>
