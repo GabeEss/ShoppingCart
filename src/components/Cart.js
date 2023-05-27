@@ -35,9 +35,9 @@ const Cart = ({onCloseCart, className}) => {
                 />
             ))}
             </div>
-            <div>Subtotal: {subtotal}</div>
+            <div>Subtotal: ${subtotal}</div>
             <Link to={`/Shop`} onClick={handleCheckout} id="checkout">
-                {subtotal === 0 ? browseString : checkoutString}
+                {subtotal < .01 ? browseString : checkoutString}
             </Link>
         </div>
     )

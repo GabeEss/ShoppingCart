@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import "../css/ProductDisplay.css";
 import DisplayItem from "./DisplayItem";
 import allProducts from "../data/all-products";
@@ -8,16 +8,18 @@ import { highlighterOne } from "../data/highlighters";
 import { notebookOne } from "../data/notebooks";
 import pencils from "../data/pencils";
 import pens from "../data/pens";
+import { SearchContext } from "./SearchContext";
 
 const ProductDisplay = ({selectedProduct}) => {
     const [products, setProducts] = useState([]);
     const [multiples, setMultiples] = useState([]);
+    const {search} = useContext(SearchContext);
 
 
     // Display all products on-load
     useEffect(() => {
         editDisplayAll(allProducts);
-      }, []);
+    }, []);
 
     // Display products depending on if one item, multiple items, or all items.
     useEffect(() => {
@@ -52,25 +54,41 @@ const ProductDisplay = ({selectedProduct}) => {
             editDisplayAll(allProducts);
     }, [selectedProduct]);
 
+    // Handles a change in the searchbar value. Checks for products that start with the same letters.
+    useEffect(() => {
+        setProducts([]);
+        setMultiples([]);
+        Object.values(allProducts).forEach(product => {
+            let index = 0;
+            if (product.name.toLowerCase().startsWith(search.toLowerCase())) {
+                index += 1;
+                editDisplayMultiple(product, index)
+            }
+        })
+    }, [search])
+
+    // Handles when the user clicks on all products in the sidebar.
     const editDisplayAll = (products) => {
         setMultiples([]);
         const mappedProducts = products.map((product, index) => {
             return <DisplayItem key={index} product={product} />;
-          });
+        });
 
-          setProducts(mappedProducts);
-      }
+        setProducts(mappedProducts);
+    };
 
-      const editDisplayMultiple = (product, index) => {
+    // Handles when the user clicks on an item-type with multiple items in the sidebar.
+    const editDisplayMultiple = (product, index) => {
         const mappedProduct = <DisplayItem key={index} product={product} />;
         setMultiples((prevMultiples) => [...prevMultiples, mappedProduct]);
-      };
+    };
 
+    // Handles when the user clicks on an item-type with one item in the sidebar.
     const editDisplayOneItem = (product) => {
         setMultiples([]);
         const mappedProduct = <DisplayItem product={product} />
         setProducts(mappedProduct);
-    }
+    };
 
 
     return(

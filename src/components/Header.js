@@ -1,19 +1,14 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "./CartContext";
+import { SearchContext } from "./SearchContext";
 import '../css/Header.css';
 
 const Header = ({ onToggleCart }) => {
-    const [searchTerm, setSearchTerm] = useState("");
     const {cart} = useContext(CartContext);
+    const {search, setSearchTerm} = useContext(SearchContext);
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
-    };
-
-    const handleSearchSubmit = (event) => {
-        event.preventDefault();
-        console.log("Search term:", searchTerm);
-        setSearchTerm("");
     };
 
     return(
@@ -24,14 +19,13 @@ const Header = ({ onToggleCart }) => {
                 <a href="/Shop">Shop</a>
             </div>
             <div className="search">
-                <form onSubmit={handleSearchSubmit}>
+                <form>
                         <input
                             type="text"
                             placeholder="Search..."
-                            value={searchTerm}
+                            value={search}
                             onChange={handleSearchChange}
                         />
-                        <button type="submit">Search</button>
                     </form>
             </div>
                 <div className="cart-button">
