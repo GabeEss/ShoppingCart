@@ -1,15 +1,23 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import { SearchContext } from "./SearchContext";
 import '../css/Header.css';
 
 const Header = ({ onToggleCart }) => {
+    const navigate = useNavigate();
     const {cart} = useContext(CartContext);
     const {search, setSearchTerm} = useContext(SearchContext);
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
+
+    // When user submits the form, takes user to the shop.
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        navigate("/Shop");
+      };
 
     return(
         <div>
@@ -19,13 +27,15 @@ const Header = ({ onToggleCart }) => {
                 <a href="/Shop">Shop</a>
             </div>
             <div className="search">
-                <form>
+                <form onSubmit={handleFormSubmit}>
                         <input
                             type="text"
                             placeholder="Search..."
                             value={search}
                             onChange={handleSearchChange}
+                            onSubmit={handleFormSubmit}
                         />
+                        <button type="submit">Go</button>
                     </form>
             </div>
                 <div className="cart-button">
