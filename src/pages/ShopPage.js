@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "../css/ShopPage.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import MainDisplay from "../components/MainDisplay";
 import Cart from "../components/Cart";
 
@@ -27,6 +28,7 @@ const ShopPage = () => {
             <div className="products">
                 <MainDisplay/>
             </div>
+            <Footer/>
         </div>
     )
 }

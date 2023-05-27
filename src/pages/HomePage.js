@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "../css/HomePage.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
             <div className="home-page">
                 {/* <p>Image by <a href="https://www.freepik.com/free-photo/notebook-felt-tip-pen-eyeglasses-stationery-cellphone-white-background_2905880.htm#query=office%20supplies%20background&position=24&from_view=keyword&track=ais">Freepik</a></p> */}
             </div>
+            <Footer/>
         </div>   
     )
 }

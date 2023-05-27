@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import '../css/ItemPage.css';
 import Cart from "../components/Cart";
 import { Carousel } from 'react-responsive-carousel';
@@ -82,6 +83,7 @@ const ItemPage = () => {
                         </div>
                 </div>
                 )}
+            <Footer/>
         </div>   
     )
 }
