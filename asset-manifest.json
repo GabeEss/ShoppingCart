@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ShoppingCart/static/css/main.d4e9188f.css",
-    "main.js": "/ShoppingCart/static/js/main.78f243f0.js",
+    "main.css": "/ShoppingCart/static/css/main.d3ed154e.css",
+    "main.js": "/ShoppingCart/static/js/main.ad39561e.js",
     "static/media/Gallery_2 PAPER MATE EverStrong 2 Pencils, Reinforced, Break-Resistant Lead When Writing, 72-Count, Black.jpg": "/ShoppingCart/static/media/Gallery_2 PAPER MATE EverStrong 2 Pencils, Reinforced, Break-Resistant Lead When Writing, 72-Count, Black.547ae652423ce80377ca.jpg",
     "static/media/Gallery_3 Sharpie ACCENT Highlighter, Tank Highlighter Chisel, 4-Carded, Fluorescent Assorted.jpg": "/ShoppingCart/static/media/Gallery_3 Sharpie ACCENT Highlighter, Tank Highlighter Chisel, 4-Carded, Fluorescent Assorted.1da47a9b7b84457235bc.jpg",
     "static/media/Gallery_1 Mr Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack Of 6.jpg": "/ShoppingCart/static/media/Gallery_1 Mr Pen No Bleed Pens, Bible Pens, Fine Tip, Assorted Color, Pack Of 6.facdebac39cd31813814.jpg",
@@ -32,11 +32,11 @@
     "static/media/Gallery_3 BIC Cristal Ball Stick Pens, Medium Point (1.0mm), Assorted Colors, 10-Pack, Great for Everyday Writing.jpg": "/ShoppingCart/static/media/Gallery_3 BIC Cristal Ball Stick Pens, Medium Point (1.0mm), Assorted Colors, 10-Pack, Great for Everyday Writing.5b323a7fb1c59e4f56c3.jpg",
     "static/media/Gallery_2 Gel Pens, 0.7mm Tip, Black, 12:Box - Moustache.jpeg": "/ShoppingCart/static/media/Gallery_2 Gel Pens, 0.7mm Tip, Black, 12:Box - Moustache.2989a4d9895347756545.jpeg",
     "index.html": "/ShoppingCart/index.html",
-    "main.d4e9188f.css.map": "/ShoppingCart/static/css/main.d4e9188f.css.map",
-    "main.78f243f0.js.map": "/ShoppingCart/static/js/main.78f243f0.js.map"
+    "main.d3ed154e.css.map": "/ShoppingCart/static/css/main.d3ed154e.css.map",
+    "main.ad39561e.js.map": "/ShoppingCart/static/js/main.ad39561e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4e9188f.css",
-    "static/js/main.78f243f0.js"
+    "static/css/main.d3ed154e.css",
+    "static/js/main.ad39561e.js"
   ]
 }
