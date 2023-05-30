@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../css/MainDisplay.css";
 import Sidebar from "./Sidebar";
 import ProductDisplay from "./ProductDisplay";
+import { SearchContext } from "./SearchContext";
 
 const MainDisplay = () => {
   const [selectedProductType, setSelectedProduct] = useState(null);
+  const {setSearchTerm} = useContext(SearchContext);
 
   const handleProductSelection = (type) => {
+    setSearchTerm("");
     setSelectedProduct(type);
   };
 
